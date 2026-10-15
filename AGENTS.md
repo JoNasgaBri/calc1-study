@@ -12,3 +12,14 @@ App de estudo de Cálculo 1 (FAMAT/UFU) — React 18 + TypeScript + Vite, Tailwi
 - LaTeX: usar `String.raw` (`r\`...\``); macros `\sen` e `\tg` definidas em `components/math/TeX.tsx`
 - Gráficos JSXGraph: sempre via `JXGBoard` (faz `freeBoard` no cleanup)
 - CSS do JSXGraph importado por caminho relativo a `node_modules` (o pacote não exporta o subpath)
+
+## Deploy no GitHub Pages
+1. Crie um repositório público no GitHub (ex.: `Estudo`).
+2. Adicione o remote e envie a branch `main`:
+   ```bash
+   git remote add origin https://github.com/SEU_USUARIO/NOME_DO_REPO.git
+   git push -u origin main
+   ```
+3. No GitHub, vá em **Settings → Pages** e escolha **Source: GitHub Actions**.
+4. O workflow `.github/workflows/deploy.yml` compila e publica automaticamente a cada push na `main`.
+5. A URL será `https://SEU_USUARIO.github.io/NOME_DO_REPO/`.
